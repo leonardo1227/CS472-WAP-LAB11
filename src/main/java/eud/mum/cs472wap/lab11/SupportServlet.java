@@ -13,6 +13,8 @@ public class SupportServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();
         out.print("<html><head><title>CSTech</title></head><body>");
         out.print("<form method='post'>");
@@ -29,6 +31,8 @@ public class SupportServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("UTF-8");
         ServletContext servletContext = this.getServletContext();
         Random ticketId = new Random();
         String supportTicketId = "CSSP"+ticketId.nextInt();
