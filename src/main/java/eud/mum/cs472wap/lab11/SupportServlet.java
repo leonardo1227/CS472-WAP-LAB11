@@ -17,14 +17,14 @@ public class SupportServlet extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();
         out.print("<html><head><title>CSTech</title></head><body>");
-        out.print("<form method='post'>");
+        out.print("<form method='post' action='support'>");
 
         out.print("<div><label>Name:</label><input type=\"text\" name=\"name\"></input></div>");
         out.print("<div><label>Email Address:</label><input type=\"text\" name=\"email\"></input></div>");
         out.print("<div><label>Problem:</label><input type=\"text\" name=\"problem\"></input></div>");
         out.print("<div><label>Problem Description:</label><textarea name=\"problem-description\"></textarea></div>");
 
-        out.print("<input type=\"submit\" value=\"help\"></input>");
+        out.print("<button type=\"submit\">help</button>");
         out.print("</form>");
         out.print("</body></html>");
     }
